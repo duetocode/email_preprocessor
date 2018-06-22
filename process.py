@@ -91,8 +91,9 @@ def run(DIR):
 
 
 if __name__ == "__main__":
-    for file in os.listdir("./data"):
-        target_dir = os.path.join("data", file)
+    data_dir = '/Users/bowie/Downloads/spam'
+    for file in os.listdir(data_dir):
+        target_dir = os.path.join(data_dir, file)
         if os.path.isdir(target_dir):
             print("process emails in %s" % (target_dir))
             run(target_dir)
